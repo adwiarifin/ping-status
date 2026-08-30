@@ -17,6 +17,14 @@ Refresh now
 
 ## Install
 
+This plugin needs SwiftBar, which is **not** part of the work-machine setup — it is deliberately excluded there as a personal tool. On a fresh machine, install it first:
+
+```bash
+brew install --cask swiftbar
+```
+
+Launch it once so it registers its menu bar item and writes its preferences.
+
 SwiftBar runs every executable in one plugin folder. Rather than copying the script there, point that folder **at this repo** — then `git pull` updates the live plugin with no further steps.
 
 ```bash
@@ -30,7 +38,7 @@ defaults read com.ameba.SwiftBar PluginDirectory
 # /Users/adwi/Projects/mine/ping-status/plugins
 ```
 
-That is exactly how this machine is set up today. SwiftBar sets `MakePluginExecutable = 1` by default, so it marks the script executable itself — no `chmod` needed.
+SwiftBar sets `MakePluginExecutable = 1` by default, so it marks the script executable itself — no `chmod` needed.
 
 Finally **SwiftBar → Refresh all**. The dot appears immediately; there is nothing else to configure.
 
